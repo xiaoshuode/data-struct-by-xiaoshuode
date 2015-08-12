@@ -1,0 +1,9 @@
+void Convert(ALGraph &G,int arcs[M][N]){
+	for(i=0;i<n;i++){			//依次便利各顶点表结点为头的边链表
+		p=(G->v[i]).firstarc;	//取出顶点i的第一条出边
+		while(p!=NULL){			//遍历边链表
+			arcs[i][p->data]=1;
+			p=p->nextarc;		//取出下一条出边
+		}
+	}							
+}
